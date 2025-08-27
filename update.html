@@ -1,0 +1,15 @@
+{% extends "ems1/layout.html"%}
+{% block body%}
+
+{% load static %}
+<link rel="stylesheet" href="ems1/update.css">
+<form action="{% url 'Update' user.id %}" method="POST">
+{% csrf_token %}
+<label >Email</label>
+<input type="text" placeholder="email" name="UpdateEmail">
+
+<button type="submit">Update</button>
+
+</form>
+
+{% endblock%}

@@ -1,0 +1,13 @@
+{% extends "ems1/layout.html"%}
+{% load static %}
+{% block body %}
+<div id="main" style="overflow-x:auto;">
+<div id="login"></div>
+<a href="{% url  'login_view' %}">login</a>
+</div>
+<div id="signip">
+<a href= "{% url  'home' %}">Signin</a>
+ </div>
+<link rel="stylesheet" href="{% static 'ems1/style.css' %}">
+</div>
+{% endblock %}

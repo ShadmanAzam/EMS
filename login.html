@@ -1,0 +1,28 @@
+{% extends "ems1/layout.html"%}
+{% load static %}
+{%block body%}
+
+<link rel="stylesheet" href="{% static  'ems1/Login.css' %}">
+<div id="main" style="overflow-x:auto;">
+    <div id="form1" >
+        <div id="insert1" >
+            <h1>🧑🏻‍💻</h1>
+        </div>
+        <form action="{% url 'login_view' %}" method="POST">
+            {% csrf_token %}
+            <div id="insert" >
+            <input type="text" placeholder="username" name="username" required >
+            <input type="text" placeholder="password" name="password" required><br>
+            <input type="checkbox" placeholder="check" required><br>
+            <button type="submit ">Login</button>
+            <div id="signup">
+            <a href="">Don't have any account?</a>
+            <a href="{% url 'home'%}">Signup</a>
+        </div>
+        </div>
+            
+            </form>
+    </div>
+</div>
+
+{%endblock%}
